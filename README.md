@@ -1,4 +1,4 @@
-# Stealth SDK
+# zkAster Stealth SDK
 
 A lightweight, type-safe TypeScript SDK for implementing **Stealth Addresses** (based on EIP-5564) on Ethereum and EVM-compatible chains.
 
