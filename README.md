@@ -15,9 +15,9 @@ Enable privacy-preserving transactions where the receiver's identity remains hid
 ## 📦 Installation
 
 ```bash
-npm install stealth-sdk
+npm install zkaster-stealth-sdk
 # or
-yarn add stealth-sdk
+yarn add zkaster-stealth-sdk
 ```
 
 ## 📖 Usage
@@ -31,7 +31,7 @@ The receiver needs two key pairs:
 The **Viewing Public Key** and **Spending Public Key** are shared with senders (e.g., via a registry or QR code).
 
 ```typescript
-import { generateStealthKeys } from "stealth-sdk";
+import { generateStealthKeys } from "zkaster-stealth-sdk";
 
 // Generate new random keys
 const keys = generateStealthKeys();
@@ -45,7 +45,7 @@ console.log("My Spending Public Key:", keys.spendingPublicKey);
 To send funds privately, the sender generates a unique **Stealth Address** using the receiver's public keys.
 
 ```typescript
-import { generateStealthAddress } from "stealth-sdk";
+import { generateStealthAddress } from "zkaster-stealth-sdk";
 
 const recipientViewingKey = "0x..."; // From recipient
 const recipientSpendingKey = "0x..."; // From recipient
@@ -65,7 +65,7 @@ console.log("View Tag:", stealth.viewTag); // Publish this!
 The receiver scans a list of potential metadata (from chain events or a database) to find payments belonging to them.
 
 ```typescript
-import { scanStealthAddresses } from "stealth-sdk";
+import { scanStealthAddresses } from "zkaster-stealth-sdk";
 
 // Metadata fetched from blockchain events or indexer
 const metadataList = [
@@ -94,7 +94,7 @@ console.log(`Found ${myPayments.length} payments!`);
 Once a stealth address is discovered, the receiver can derive the **Spending Private Key** for that specific address.
 
 ```typescript
-import { deriveStealthSpendingKey } from "stealth-sdk";
+import { deriveStealthSpendingKey } from "zkaster-stealth-sdk";
 
 const payment = myPayments[0];
 
