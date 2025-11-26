@@ -1,0 +1,28 @@
+{
+    "name": "zkaster-stealth-sdk",
+    "version": "0.1.0",
+    "description": "A lightweight SDK for generating and scanning stealth addresses (EIP-5564)",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+        "build": "tsc",
+        "test": "npx ts-node test/demo.ts"
+    },
+    "keywords": [
+        "stealth-address",
+        "privacy",
+        "ethereum",
+        "eip-5564"
+    ],
+    "author": "",
+    "license": "MIT",
+    "dependencies": {
+        "@noble/curves": "^1.4.0",
+        "viem": "^2.10.0"
+    },
+    "devDependencies": {
+        "typescript": "^5.0.0",
+        "ts-node": "^10.9.0",
+        "@types/node": "^20.0.0"
+    }
+}
